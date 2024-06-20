@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InstiOLX - Sell Your Item</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Sell Your Item on InstiOLX</h1>
+      <form>
+        <label for="title">Title</label>
+        <input
+          type="text"
+          id="title"
+          name="title"
+          placeholder="Enter item title"
+          required
+        />
+
+        <label for="description">Description</label>
+        <textarea
+          id="description"
+          name="description"
+          placeholder="Describe your item in detail"
+          required
+        ></textarea>
+
+        <label for="price">Price</label>
+        <input
+          type="number"
+          id="price"
+          name="price"
+          min="0"
+          placeholder="₹ Enter selling price"
+          required
+        />
+
+        <label for="buying-date">Buying Date</label>
+        <input
+          type="date"
+          id="buying-date"
+          name="buying-date"
+          placeholder="DD-MM-YYYY"
+          required
+        />
+
+        <label for="buying-price">Buying Price</label>
+        <input
+          type="number"
+          id="buying-price"
+          name="buying-price"
+          min="0"
+          placeholder="₹ Enter original price"
+          required
+        />
+
+        <label for="photos">Upload Multiple Photos</label>
+        <input
+          type="file"
+          id="photos"
+          name="photos"
+          accept="image/*"
+          multiple
+          required
+        />
+
+        <h2>Your Details</h2>
+
+        <label for="phone-number">Phone Number</label>
+        <input type="tel" id="phone-number" name="phone-number" required />
+
+        <label for="location">Location</label>
+        <input type="text" id="location" name="location" required />
+
+        <button type="submit">Post</button>
+      </form>
+    </div>
+  </body>
+</html>
