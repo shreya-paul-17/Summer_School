@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number Guessing Game</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+        background: radial-gradient(circle, #3494e6, #ec6ead);
+      }
+      h1 {
+        text-align: center;
+      }
+      .form-container {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .form-group {
+        margin-bottom: 15px;
+      }
+      .form-group label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      #guess-result {
+        margin-top: 20px;
+        font-size: 1.2em;
+        text-align: center;
+      }
+      button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #4caf50;
+        color: white;
+        cursor: pointer;
+        font-weight: bold;
+      }
+      button:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <h1>Number Guessing Game</h1>
+      <div class="form-group">
+        <label for="user-guess">Enter your guess:</label>
+        <input type="number" id="user-guess" required />
+      </div>
+      <button id="submit-guess">Submit Guess</button>
+      <p id="guess-result"></p>
+    </div>
+
+    <script>
+      // Generate a random target number between 1 and 100
+      const targetNumber = Math.floor(Math.random() * 100) + 1;
+
+      document
+        .getElementById("submit-guess")
+        .addEventListener("click", function () {
+          const userGuess = parseInt(
+            document.getElementById("user-guess").value
+          );
+          const resultElement = document.getElementById("guess-result");
+
+          if (isNaN(userGuess)) {
+            resultElement.innerText = "Please enter a valid number.";
+            return;
+          }
+
+          if (userGuess < targetNumber) {
+            resultElement.innerText =
+              "It's Lower than the correct answer! Try again.";
+          } else if (userGuess > targetNumber) {
+            resultElement.innerText =
+              "It's Higher than the correct answer! Try again.";
+          } else {
+            resultElement.innerText = `Congratulations! You have guessed the correct number: ${targetNumber}`;
+          }
+        });
+    </script>
+  </body>
+</html>
