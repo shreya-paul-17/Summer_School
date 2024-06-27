@@ -48,8 +48,7 @@
           "images": ["image1.jpg", "image2.jpg"],
           "createdAt": "2024-06-20T00:00:00.000Z",
           "updatedAt": "2024-06-20T00:00:00.000Z"
-      },
-      //...
+      }
   ]
   ```
 
