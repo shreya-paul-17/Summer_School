@@ -1,4 +1,4 @@
-# InstiOlx API Documentation
+# InstiOLX API Documentation
 
 ## Endpoints
 
@@ -49,7 +49,7 @@
           "createdAt": "2024-06-20T00:00:00.000Z",
           "updatedAt": "2024-06-20T00:00:00.000Z"
       },
-      ...
+      //...
   ]
   ```
 
@@ -147,4 +147,4 @@
 
 ---
 
-You can save this documentation in a file like `API_DOCUMENTATION.md` and include it in your project repository. This ensures that anyone working with the API can easily understand the available endpoints and their functionalities.
+
